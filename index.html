@@ -9,7 +9,20 @@
 </head>
 
 <body>
-    <h1>Hello World</h1>
+    <h1 id="hello-world-id">Hello World</h1>
 </body>
+<script>
+    $(window).load(function () {
+        ChangeColor();
+    });
+    function ChangeColor() {
+        var helloWorldTag = $("hello-world-id");
+        helloWorldTag.click(function () {
+            helloWorldTag.css("background-color", "green");
+        })
+    }
+</script>
+<script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
+    crossorigin="anonymous"></script>
 
 </html>
